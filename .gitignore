@@ -6,3 +6,8 @@
 *.csproj
 *.unityproj
 *.sln
+
+# VIM
+*.swp
+*.bak
+*.*~
