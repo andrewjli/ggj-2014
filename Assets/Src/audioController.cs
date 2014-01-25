@@ -1,9 +1,10 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class audioController : MonoBehaviour {
 
-    public AudioClip[] sounds;
+    public List<AudioClip> sounds;
     public CharacterController controller;
     private bool step = true; 
     float audioStepLengthWalk = 0.25f; 
@@ -11,6 +12,10 @@ public class audioController : MonoBehaviour {
 
 	void Start () {
 	
+        sounds.Add((AudioClip)Resources.Load("Audio/footstep"));
+        sounds.Add((AudioClip)Resources.Load("Audio/pickup"));
+        controller = Camera.main.GetComponent<CharacterController>();
+
 	}
 	
 	
