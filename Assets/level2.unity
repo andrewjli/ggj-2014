@@ -319,7 +319,6 @@ GameObject:
   - 114: {fileID: 591569183}
   - 114: {fileID: 591569182}
   - 114: {fileID: 591569181}
-  - 114: {fileID: 591569185}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -486,19 +485,6 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &591569185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 591569175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fce7c55aff6aef4090a55b687b7612b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 60
-  currentPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &630045201
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,6 +552,45 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.6343503, y: 21.3630219, z: -41.7913132}
   m_LocalScale: {x: 98.6107178, y: 2, z: -45.8296738}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!1 &641575272
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 641575274}
+  - 114: {fileID: 641575273}
+  m_Layer: 0
+  m_Name: TimeController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &641575273
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 641575272}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e2f137c29e04f33ac14725bcf3c602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewindAmount: 0
+--- !u!4 &641575274
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 641575272}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.86169243, y: 54.2057266, z: -16.4228573}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &731118191
@@ -1321,7 +1346,7 @@ GameObject:
   - 114: {fileID: 1907347833}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: TimeTrack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

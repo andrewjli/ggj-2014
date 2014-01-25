@@ -134,7 +134,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b92b91c4acf0b9043b7e4309930fee2e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.54342461
+      value: .61917001
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b92b91c4acf0b9043b7e4309930fee2e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -227,8 +227,8 @@ GameObject:
   - 4: {fileID: 290139256}
   - 114: {fileID: 290139255}
   m_Layer: 0
-  m_Name: TimeLord
-  m_TagString: Untagged
+  m_Name: TimeController
+  m_TagString: TimeController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -244,6 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72e2f137c29e04f33ac14725bcf3c602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rewindAmount: 0
 --- !u!4 &290139256
 Transform:
   m_ObjectHideFlags: 0
@@ -335,7 +336,6 @@ GameObject:
   - 114: {fileID: 591569183}
   - 114: {fileID: 591569182}
   - 114: {fileID: 591569181}
-  - 114: {fileID: 591569185}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -502,19 +502,6 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &591569185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 591569175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fce7c55aff6aef4090a55b687b7612b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 60
-  currentPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &630045201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1267,7 +1254,7 @@ Transform:
   m_PrefabInternal: {fileID: 29317975}
   m_GameObject: {fileID: 1904597023}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: -6.06557941, y: 1.54342461, z: 2.80211425}
+  m_LocalPosition: {x: -6.06557941, y: .61917001, z: 2.80211425}
   m_LocalScale: {x: .5, y: .100000001, z: .5}
   m_Children: []
   m_Father: {fileID: 0}

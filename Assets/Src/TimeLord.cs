@@ -6,12 +6,20 @@ public class TimeLord : MonoBehaviour {
 
 	Dictionary<string, ArrayList> gameObjectPositions = new Dictionary<string, ArrayList>();
 	Dictionary<string, ArrayList> gameObjectRotations = new Dictionary<string, ArrayList>();
-
+	private CharacterController character;
 	bool paused = false;
+
+	public float rewindAmount;
+	private float timeElapsed;
 
 	float time = 1f;
 
+	public void addRewindTime(float f){
+				rewindAmount += f;
+		}
+
 	void Start () {
+		timeElapsed = 0;
 		foreach (GameObject o in GameObject.FindObjectsOfType(typeof(GameObject)))
 		{
             if (o.tag == "TimeTrack")
@@ -19,18 +27,32 @@ public class TimeLord : MonoBehaviour {
 				gameObjectPositions.Add(o.name, new ArrayList());
 				gameObjectRotations.Add(o.name, new ArrayList());
 			}
+			if (o.tag == "MainCamera")
+				character =  o.GetComponent<CharacterController>();
         }
     }
-	
+
 	void Update()
 	{
+		bool isMoving = character.velocity.magnitude > 0 || Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.A) 
+			|| Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.Space)
+				|| Input.GetKey (KeyCode.R);
+
+		if (!isMoving) {
+						paused = true;
+				} else {
+						paused = false;
+				}
+
+		bool isRewinding = false;
 		if (Input.GetKey (KeyCode.R))
 		{
+			if (rewindAmount>0)
+			{
+			isRewinding=true;
 			rewind ();
-		} else if(Input.GetKeyDown(KeyCode.P))
-		{
-            paused = !paused;
-        } else {
+			}
+		} else {
 			// Not rewinding
 			foreach (GameObject o in GameObject.FindObjectsOfType (typeof(GameObject)))
 			{
@@ -52,6 +74,14 @@ public class TimeLord : MonoBehaviour {
 				}
             }
         }
+		if (isRewinding) {
+			rewindAmount =Mathf.Max (0, rewindAmount - Time.deltaTime);
+				timeElapsed = Mathf.Max (0, timeElapsed - Time.deltaTime);
+				}
+				else {
+			if (isMoving)
+				timeElapsed += Time.deltaTime;
+				}
 
 		// Lerp time for progressive pause effect, oh and apply it.
 		Time.timeScale = (paused) ? 0f: 1f;
@@ -59,7 +89,7 @@ public class TimeLord : MonoBehaviour {
 
 	void OnGUI()
 	{
-		GUI.TextArea(new Rect(25f, 25f, 200f, 25f), string.Format("Game is currently at {0}", time));
+		GUI.Box(new Rect(10, 10, 170, 50), "Time Elapsed: " + timeElapsed.ToString("F1")+"\nReplay Seconds: "+rewindAmount.ToString("F1"));
 	}
 
 	public void rewind()

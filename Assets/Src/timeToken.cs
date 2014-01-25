@@ -26,10 +26,9 @@ public class timeToken : MonoBehaviour {
 
     void addTime()
     {
-      float currenttime =  Camera.main.GetComponent<timeController>().timeRemaining;
 
-      float newtime = currenttime + timeBonus;
+		TimeLord t =GameObject.FindObjectOfType<TimeLord> ();
+		t.addRewindTime (timeBonus);
 
-      Camera.main.GetComponent<timeController>().setTime(newtime);
     }
 }
