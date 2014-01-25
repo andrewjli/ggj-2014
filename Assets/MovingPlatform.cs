@@ -16,21 +16,13 @@ public class MovingPlatform : MonoBehaviour {
 		if (unaffectedByTimechange) {
 			calculatePos();
 				}
+		else{
+		if (Time.timeScale!=0)
+				calculatePos();
+		}
 	}
 
-	void fixedUpdate(){
-		if (!unaffectedByTimechange) {
-			calculatePos();
-		}
-		}
-
 	void calculatePos(){
-				if (transform.position == endPoint.position) {
-						changeDirection = true;
-				}
-				if (transform.position == startPoint.position) {
-						changeDirection = false;
-				}
 				if (changeDirection) {
 						transform.position = Vector3.MoveTowards (transform.position, startPoint.position, speed);
 				} else {
