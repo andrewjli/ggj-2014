@@ -11,7 +11,7 @@ public class MovingPlatform : MonoBehaviour {
 	void Start () {}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
         if (transform.position == endPoint.position)
         {
             changeDirection = true;
