@@ -20,6 +20,7 @@ public class timeToken : MonoBehaviour {
     void OnTriggerEnter(Collider other)
     {
         addTime();
+        Camera.main.SendMessage("playPickupSound");
         Destroy(this.gameObject);
     }
 
