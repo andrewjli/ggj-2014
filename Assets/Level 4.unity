@@ -392,7 +392,7 @@ MonoBehaviour:
   endPoint: {fileID: 1252352168}
   startPoint: {fileID: 1027950823}
   speed: .100000001
-  changeDirection: 0
+  changeDirection: 1
   unaffectedByTimechange: 1
 --- !u!23 &345900907
 Renderer:
