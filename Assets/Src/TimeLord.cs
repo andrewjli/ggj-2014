@@ -6,7 +6,7 @@ public class TimeLord : MonoBehaviour {
 
 	Dictionary<string, ArrayList> gameObjectPositions = new Dictionary<string, ArrayList>();
 	Dictionary<string, ArrayList> gameObjectRotations = new Dictionary<string, ArrayList>();
-
+	private CharacterController character;
 	bool paused = false;
 
 	float time = 1f;
@@ -19,18 +19,26 @@ public class TimeLord : MonoBehaviour {
 				gameObjectPositions.Add(o.name, new ArrayList());
 				gameObjectRotations.Add(o.name, new ArrayList());
 			}
+			if (o.tag == "MainCamera")
+				character =  o.GetComponent<CharacterController>();
         }
     }
-	
+
 	void Update()
 	{
+		bool isMoving = character.velocity.magnitude > 0 || Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.A) 
+			|| Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.Space)
+				|| Input.GetKey (KeyCode.R);
+
+		if (!isMoving)
+						paused = true;
+				else
+						paused = false;
+
 		if (Input.GetKey (KeyCode.R))
 		{
 			rewind ();
-		} else if(Input.GetKeyDown(KeyCode.P))
-		{
-            paused = !paused;
-        } else {
+		} else {
 			// Not rewinding
 			foreach (GameObject o in GameObject.FindObjectsOfType (typeof(GameObject)))
 			{
