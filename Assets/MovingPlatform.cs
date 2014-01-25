@@ -7,12 +7,13 @@ public class MovingPlatform : MonoBehaviour {
     public Transform startPoint;
     public float speed;
     public bool changeDirection;
+	private bool direction = true;
 	public bool unaffectedByTimechange;
 	// Use this for initialization
 	void Start () {}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if (unaffectedByTimechange) {
 			calculatePos();
 				}
@@ -23,10 +24,21 @@ public class MovingPlatform : MonoBehaviour {
 	}
 
 	void calculatePos(){
-				if (changeDirection) {
-						transform.position = Vector3.MoveTowards (transform.position, startPoint.position, speed);
-				} else {
-						transform.position = Vector3.MoveTowards (transform.position, endPoint.position, speed);
-				}
+		if (changeDirection) {
+			if (transform.position == endPoint.position){
+				direction = true;
+			}
+			else if (transform.position == startPoint.position){
+				direction = false;
+			}
+			if (direction){
+				transform.position = Vector3.MoveTowards (transform.position, startPoint.position, speed);
+			}
+			else if (!direction){
+				transform.position = Vector3.MoveTowards (transform.position, endPoint.position, speed);
+			}
+		} else {
+			transform.position = Vector3.MoveTowards (transform.position, endPoint.position, speed);
 		}
+	}
 }
