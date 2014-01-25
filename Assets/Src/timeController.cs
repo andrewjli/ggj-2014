@@ -31,4 +31,15 @@ public class timeController : MonoBehaviour {
     {
         GUI.Box(new Rect(10, 10, 170, 50), "Time Remaining: " + timeRemaining);
     }
+
+
+   public float getTime()
+    {
+        return this.timeRemaining;
+    }
+
+    public void setTime(float time)
+    {
+        timeRemaining = time;
+    }
 }
