@@ -17,19 +17,17 @@ public class timeController : MonoBehaviour {
 	void Update () {
 
         if (currentPosition != this.transform.position)
-            timeRemaining -= Time.deltaTime;
+            timeRemaining += Time.deltaTime;
 
 
         currentPosition = this.transform.position;
-
-        //Debug.Log(timeRemaining);
-
+		
 	}
 
 
     void OnGUI()
     {
-        GUI.Box(new Rect(10, 10, 170, 50), "Time Remaining: " + timeRemaining);
+		//GUI.Box(new Rect(10, 10, 170, 50), "Time Elapsed: " + timeRemaining.ToString("F1"));
     }
 
 
@@ -42,4 +40,5 @@ public class timeController : MonoBehaviour {
     {
         timeRemaining = time;
     }
+
 }
