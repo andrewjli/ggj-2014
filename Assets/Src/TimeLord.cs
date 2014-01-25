@@ -8,6 +8,7 @@ public class TimeLord : MonoBehaviour {
 	Dictionary<string, ArrayList> gameObjectRotations = new Dictionary<string, ArrayList>();
 	private CharacterController character;
 	bool paused = false;
+	Light timeLight;
 
 	public float rewindAmount;
 	private float timeElapsed;
@@ -19,6 +20,7 @@ public class TimeLord : MonoBehaviour {
 		}
 
 	void Start () {
+		timeLight = GameObject.Find("TimeLight").GetComponent<Light>();
 		timeElapsed = 0;
 		foreach (GameObject o in GameObject.FindObjectsOfType(typeof(GameObject)))
 		{
@@ -74,13 +76,24 @@ public class TimeLord : MonoBehaviour {
 				}
             }
         }
+
 		if (isRewinding) {
-			rewindAmount =Mathf.Max (0, rewindAmount - Time.deltaTime);
+				rewindAmount =Mathf.Max (0, rewindAmount - Time.deltaTime);
 				timeElapsed = Mathf.Max (0, timeElapsed - Time.deltaTime);
+	timeLight.color= new Color(0,255,192);
+			timeLight.color= new Color(0.0f,255.0f/255.0f,192.0f/255.0f,1.0f);
+
 				}
 				else {
 			if (isMoving)
+			{
 				timeElapsed += Time.deltaTime;
+				timeLight.color= new Color(255.0f/255.0f,121.0f/255.0f,0.0f,1.0f);
+			}
+			else
+			{
+				timeLight.color= new Color(0.0f,0.0f,0.0f,1.0f);
+			}
 				}
 
 		// Lerp time for progressive pause effect, oh and apply it.
