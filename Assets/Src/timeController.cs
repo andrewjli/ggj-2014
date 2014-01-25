@@ -22,7 +22,7 @@ public class timeController : MonoBehaviour {
 
         currentPosition = this.transform.position;
 
-        // Debug.Log(timeRemaining);
+        //Debug.Log(timeRemaining);
 
 	}
 
