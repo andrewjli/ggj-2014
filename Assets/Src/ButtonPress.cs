@@ -16,18 +16,17 @@ public class ButtonPress : MonoBehaviour {
 	void Update () {
 		if (Input.GetKey (KeyCode.E) && inRange && !pressed) {
 			runPressed();
-					} else if (pressed) {
+		} else if (pressed) {
 			if (!timecont.isStopped())
-							timeRemaining -= Time.deltaTime;
-					}
-				
-		if (pressed && timeRemaining<=0)
-				{
-				pressed=false;
-				gameObject.transform.position += Vector3.up * 0.2f;
-				GameObject.Find("Door").GetComponent<UnlockDoor>().down();
-					}
+				timeRemaining -= Time.deltaTime;
 		}
+				
+		if (pressed && timeRemaining<=0) {
+			pressed=false;
+			gameObject.transform.position += Vector3.up * 0.2f;
+			GameObject.Find("Door").GetComponent<UnlockDoor>().down();
+		}
+	}
 
 	void OnTriggerEnter (Collider other) {
 		inRange = true;
@@ -41,15 +40,15 @@ public class ButtonPress : MonoBehaviour {
 	public bool isPressed() {
 		return pressed;
 	}
+
 	public void setPressed(bool a){
 		if (a) {
-						if (!pressed)
-								runPressed ();
-				} else {
+			if (!pressed)
+				runPressed ();
+		} else {
 			pressed=a;
 			timeRemaining=0;
-				}
-		
+		}
 	}
 
 	void runPressed(){
