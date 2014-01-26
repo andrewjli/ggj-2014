@@ -22,7 +22,7 @@ public class MagicBall : MonoBehaviour {
 				gameObject.GetComponent<Rigidbody> ().velocity = new Vector3(0,0,0);
 				storedAngularVelo = gameObject.GetComponent<Rigidbody> ().angularVelocity;
 				gameObject.GetComponent<Rigidbody> ().angularVelocity = new Vector3(0,0,0);
-
+				gameObject.GetComponent<Rigidbody> ().freezeRotation = true;
 				gameObject.GetComponent<Rigidbody> ().Sleep();
 				gameObject.GetComponent<Rigidbody> ().useGravity = false;
 				hasBeenPaused=true;
@@ -31,6 +31,8 @@ public class MagicBall : MonoBehaviour {
 			if (hasBeenPaused)
 			{
 				hasBeenPaused=false;
+				gameObject.GetComponent<Rigidbody> ().freezeRotation = false;
+
 				gameObject.GetComponent<Rigidbody> ().useGravity = true;
 				gameObject.GetComponent<Rigidbody> ().WakeUp();
 				gameObject.GetComponent<Rigidbody> ().velocity = storedVelo;
