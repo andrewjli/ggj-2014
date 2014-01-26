@@ -6,12 +6,14 @@ public class UnlockDoor : MonoBehaviour {
 	private Color green = new Color(0.0f, 1.0f, (65f/255f));
 	private Color red = new Color(1.0f, 0.0f, 0.0f);
 	private Light _light;
-	private Behaviour _nextLevel;
+	private NextlevelLoad _nextLevel;
 
 	// Use this for initialization
 	void Start () {
 		_light = GameObject.Find("Door Light").GetComponent<Light>();
 		_nextLevel = GetComponent<NextlevelLoad>();
+		if (gameObject.tag == "door5" || gameObject.tag == "door6")
+			_nextLevel.doorUnlocked = false;
 	}
 	
 	// Update is called once per frame
@@ -23,7 +25,7 @@ public class UnlockDoor : MonoBehaviour {
 				_light.color = green;
 				
 				// turn on script
-				_nextLevel.enabled = true;
+				_nextLevel.doorUnlocked = true;
 			}
 		}
 		if(gameObject.tag == "door6") {
@@ -33,10 +35,10 @@ public class UnlockDoor : MonoBehaviour {
 				_light.color = green;
 				
 				// turn on script
-				_nextLevel.enabled = true;
+				_nextLevel.doorUnlocked = true;
 			} else {
 				_light.color = red;
-				_nextLevel.enabled = false;
+				_nextLevel.doorUnlocked = false;
 			}
 		}
 	}
