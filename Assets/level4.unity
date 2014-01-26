@@ -88,7 +88,7 @@ GameObject:
   - 114: {fileID: 52162238}
   m_Layer: 0
   m_Name: MoveformSecond
-  m_TagString: Untagged
+  m_TagString: TimeTrack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -107,8 +107,8 @@ MonoBehaviour:
   endPoint: {fileID: 2056768475}
   startPoint: {fileID: 1422966279}
   speed: .100000001
-  changeDirection: 1
-  unaffectedByTimechange: 1
+  changeDirection: 0
+  unaffectedByTimechange: 0
 --- !u!23 &52162239
 Renderer:
   m_ObjectHideFlags: 0
@@ -232,7 +232,7 @@ GameObject:
   - 54: {fileID: 230422260}
   m_Layer: 0
   m_Name: Ball
-  m_TagString: Untagged
+  m_TagString: TimeTrack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -441,7 +441,7 @@ GameObject:
   - 114: {fileID: 345900906}
   m_Layer: 0
   m_Name: MoveformFirst
-  m_TagString: Untagged
+  m_TagString: TimeTrack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -460,8 +460,8 @@ MonoBehaviour:
   endPoint: {fileID: 1252352168}
   startPoint: {fileID: 1027950823}
   speed: .100000001
-  changeDirection: 1
-  unaffectedByTimechange: 1
+  changeDirection: 0
+  unaffectedByTimechange: 0
 --- !u!23 &345900907
 Renderer:
   m_ObjectHideFlags: 0
@@ -1750,32 +1750,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb7739ee70b57c54cb3bb2a474839273, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1880917894
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1880917895}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1880917895
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1880917894}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 23.4443913, y: 79.7161942, z: -86.9493713}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
 --- !u!1 &1885219576
 GameObject:
   m_ObjectHideFlags: 0
