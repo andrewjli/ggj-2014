@@ -2,6 +2,7 @@
 using System.Collections;
 
 public class NextlevelLoad : MonoBehaviour {
+	public bool doorUnlocked = true;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,7 +15,7 @@ public class NextlevelLoad : MonoBehaviour {
 	
 	void OnTriggerEnter(Collider other)
 	{
-		if(other.gameObject.tag == "MainCamera")
+		if(other.gameObject.tag == "MainCamera" && doorUnlocked)
 		{
 			if (this.gameObject.tag=="door1"){
 				Application.LoadLevel("level2");}
