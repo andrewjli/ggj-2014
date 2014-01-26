@@ -4,7 +4,7 @@ using System.Collections;
 public class UnlockDoor : MonoBehaviour {
 	private int unlock = 0;
 	private Color green = new Color(0.0f, 1.0f, (65f/255f));
-	//private Color orange = new Color(1.0f, (185.0f/255.0f), 0.0f);
+	private Color red = new Color(1.0f, 0.0f, 0.0f);
 	private Light _light;
 	private Behaviour _nextLevel;
 
@@ -16,13 +16,28 @@ public class UnlockDoor : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if(unlock == 2) {
-			// "unlock" door
-			// change light color
-			_light.color = green;
-			
-			// turn on script
-			_nextLevel.enabled = true;
+		if(gameObject.tag == "door5") {
+			if(unlock == 2) {
+				// "unlock" door
+				// change light color
+				_light.color = green;
+				
+				// turn on script
+				_nextLevel.enabled = true;
+			}
+		}
+		if(gameObject.tag == "door6") {
+			if(unlock == 1) {
+				// "unlock" door
+				// change light color
+				_light.color = green;
+				
+				// turn on script
+				_nextLevel.enabled = true;
+			} else {
+				_light.color = red;
+				_nextLevel.enabled = false;
+			}
 		}
 	}
 
