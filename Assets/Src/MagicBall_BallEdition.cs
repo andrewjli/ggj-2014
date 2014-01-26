@@ -15,7 +15,7 @@ public class MagicBall_BallEdition : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (timeController.isStopped ()||timeController.isRewinding()) {
+		if (timeController.isStopped ()) {
 			if (!hasBeenPaused)
 			{
 				storedVelo= gameObject.GetComponent<Rigidbody> ().velocity;
@@ -24,7 +24,7 @@ public class MagicBall_BallEdition : MonoBehaviour {
 				gameObject.GetComponent<Rigidbody> ().angularVelocity = new Vector3(0,0,0);
 				gameObject.GetComponent<Rigidbody> ().freezeRotation = true;
 				gameObject.GetComponent<Rigidbody> ().Sleep();
-				gameObject.GetComponent<SphereCollider> ().enabled=false;
+				//gameObject.GetComponent<SphereCollider> ().enabled=false;
 				gameObject.GetComponent<Rigidbody> ().useGravity = false;
 				hasBeenPaused=true;
 			}
@@ -37,7 +37,7 @@ public class MagicBall_BallEdition : MonoBehaviour {
 				gameObject.GetComponent<Rigidbody> ().useGravity = true;
 				gameObject.GetComponent<Rigidbody> ().WakeUp();
 				gameObject.GetComponent<Rigidbody> ().velocity = storedVelo;
-				gameObject.GetComponent<SphereCollider> ().enabled=true;
+				//gameObject.GetComponent<SphereCollider> ().enabled=true;
 
 				gameObject.GetComponent<Rigidbody> ().angularVelocity = storedAngularVelo;
 
