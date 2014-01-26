@@ -131,7 +131,7 @@ public class TimeLord : MonoBehaviour {
 
 	void OnGUI()
 	{
-		GUI.Box(new Rect(10, 10, 170, 50), "Time Elapsed: " + timeElapsed.ToString("F1")+"\nReplay Seconds: "+rewindAmount.ToString("F1"));
+		GUI.Box(new Rect(10, 10, 170, 50), "Time Elapsed: " + timeElapsed.ToString("F1")+"\nRewindable Seconds: "+rewindAmount.ToString("F1"));
 	}
 
 	public void rewind()
