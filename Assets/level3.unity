@@ -661,7 +661,6 @@ GameObject:
   - 114: {fileID: 591569183}
   - 114: {fileID: 591569182}
   - 114: {fileID: 591569181}
-  - 114: {fileID: 591569185}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -828,17 +827,6 @@ CharacterController:
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &591569185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 591569175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fce7c55aff6aef4090a55b687b7612b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &630045201
 GameObject:
   m_ObjectHideFlags: 0
@@ -2097,7 +2085,7 @@ Light:
   serializedVersion: 3
   m_Type: 2
   m_Color: {r: .945638955, g: .941176474, b: 1, a: 1}
-  m_Intensity: .200000003
+  m_Intensity: .300000012
   m_Range: 157.13266
   m_SpotAngle: 30
   m_CookieSize: 10
