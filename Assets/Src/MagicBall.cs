@@ -15,7 +15,7 @@ public class MagicBall : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (timeController.isStopped ()) {
+		if (timeController.isStopped ()||timeController.isRewinding()) {
 			if (!hasBeenPaused)
 			{
 				storedVelo= gameObject.GetComponent<Rigidbody> ().velocity;
