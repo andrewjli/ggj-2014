@@ -1,0 +1,15 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Src\MovingPlatform.cs">
+    <Files>
+      <File FileName="Assets\Src\NextlevelLoad.cs" Line="1" Column="1" />
+      <File FileName="Assets\Src\TimeLord.cs" Line="46" Column="19" />
+      <File FileName="Assets\Src\timeToken.cs" Line="22" Column="19" />
+      <File FileName="Assets\Src\MovingPlatform.cs" Line="31" Column="22" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
