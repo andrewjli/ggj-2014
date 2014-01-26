@@ -50,6 +50,10 @@ public class TimeLord : MonoBehaviour {
 
 	void Update()
 	{
+		if (Input.GetKeyDown (KeyCode.F1)) {
+			GameObject.Find("Main Camera").GetComponent<Camera>().transform.position = GameObject.Find("Door").GetComponent<NextlevelLoad>().transform.position;
+		}
+
 		if (Input.GetKeyDown (KeyCode.Q)) {
 			Application.LoadLevel(Application.loadedLevel);
 		}
