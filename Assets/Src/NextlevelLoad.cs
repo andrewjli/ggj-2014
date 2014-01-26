@@ -17,9 +17,9 @@ public class NextlevelLoad : MonoBehaviour {
 	{
 		if(other.gameObject.tag == "MainCamera")
 		{
-			if (this.tag=="door1")
-				Application.LoadLevel("level2");
-			if (this.tag=="door2")
+			if (this.gameObject.tag=="door1")
+				Application.LoadLevel("level2.unity");
+			if (this.gameObject.tag=="door2")
 				Application.LoadLevel("level3");
 		}
 	}
