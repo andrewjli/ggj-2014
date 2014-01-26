@@ -4,6 +4,9 @@ using System.Collections.Generic;
 
 public class TimeLord : MonoBehaviour {
 
+	Dictionary<string, ArrayList> gameObjectButtonStates = new Dictionary<string, ArrayList>();
+
+
 	Dictionary<string, ArrayList> gameObjectPositions = new Dictionary<string, ArrayList>();
 	Dictionary<string, ArrayList> gameObjectRotations = new Dictionary<string, ArrayList>();
 	private CharacterController character;
@@ -40,6 +43,9 @@ public class TimeLord : MonoBehaviour {
 			}
 			if (o.tag == "MainCamera")
 				character =  o.GetComponent<CharacterController>();
+			if (o.tag == "ButtonTrack"){
+				gameObjectButtonStates.Add(o.name,new ArrayList());
+			}
         }
     }
 
@@ -85,6 +91,9 @@ public class TimeLord : MonoBehaviour {
 							o.transform.rotation.z,
 							o.transform.rotation.w)
 						);         
+				}
+				if (o.tag == "ButtonTrack"){
+					gameObjectButtonStates[o.name].Add(o.GetComponent<ButtonPress>().isPressed());
 				}
             }
         }
@@ -143,7 +152,22 @@ public class TimeLord : MonoBehaviour {
                     }
 				}
 			}
-        }
+			if (o.tag == "ButtonTrack"){
+				string key = o.name;
+				ArrayList t = (ArrayList) gameObjectButtonStates[key];
+
+				if (t.Count>0)
+				{
+				o.GetComponent<ButtonPress>().setPressed(((bool) t[t.Count-1]));
+
+				if (t.Count > 1)
+				{
+					t.RemoveAt(t.Count-1);
+				gameObjectButtonStates[key]=t;
+				}
+				}
+			}
+		}
 	}
 }
 
