@@ -37,15 +37,12 @@ public class MovingPlatform : MonoBehaviour {
 				direction = false;
 			}
 			if (direction){
-				if (!timeController.isRewinding())
 				transform.position = Vector3.MoveTowards (transform.position, startPoint.position, speed);
 			}
 			else if (!direction){
-				if (!timeController.isRewinding())
 					transform.position = Vector3.MoveTowards (transform.position, endPoint.position, speed);
 			}
 		} else {
-			if (!timeController.isRewinding())
 				transform.position = Vector3.MoveTowards (transform.position, endPoint.position, speed);
 		}
 	}

@@ -11,6 +11,7 @@ TagManager:
   - door4
   - door5
   - door6
+  - ButtonTag
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

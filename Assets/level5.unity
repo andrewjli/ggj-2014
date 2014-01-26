@@ -83,15 +83,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: b92b91c4acf0b9043b7e4309930fee2e, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -26.401144
+      value: 14.575779
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b92b91c4acf0b9043b7e4309930fee2e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 23.8269463
+      value: 24.0013332
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b92b91c4acf0b9043b7e4309930fee2e, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 12.6886721
+      value: -2.59887981
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: b92b91c4acf0b9043b7e4309930fee2e, type: 2}
       propertyPath: m_LocalRotation.x
@@ -125,7 +125,7 @@ GameObject:
   - 33: {fileID: 51433969}
   - 65: {fileID: 51433968}
   m_Layer: 0
-  m_Name: CubeStart
+  m_Name: CubeEnd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -371,7 +371,7 @@ GameObject:
   - 114: {fileID: 345636688}
   m_Layer: 0
   m_Name: Button 2
-  m_TagString: Untagged
+  m_TagString: ButtonTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -525,10 +525,10 @@ Light:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 549018280}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 3
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 48.4099998
   m_SpotAngle: 30
@@ -597,7 +597,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endPoint: {fileID: 2101901599}
   startPoint: {fileID: 995762793}
-  speed: .200000003
+  speed: .0500000007
   changeDirection: 0
   unaffectedByTimechange: 0
 --- !u!23 &584225385
@@ -982,7 +982,7 @@ GameObject:
   - 33: {fileID: 929708535}
   - 65: {fileID: 929708534}
   m_Layer: 0
-  m_Name: CubeEnd
+  m_Name: CubeStart
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1148,7 +1148,7 @@ GameObject:
   - 114: {fileID: 1007094796}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: TimeTrack
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1215,10 +1215,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ff580ad61c46a4fb155bf9216d2edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 929708533}
-  startPoint: {fileID: 51433967}
+  endPoint: {fileID: 51433967}
+  startPoint: {fileID: 929708533}
   speed: .100000001
-  changeDirection: 0
+  changeDirection: 1
   unaffectedByTimechange: 1
 --- !u!1 &1037306738
 GameObject:
@@ -1304,8 +1304,8 @@ GameObject:
   - 23: {fileID: 1314947684}
   - 114: {fileID: 1314947688}
   m_Layer: 0
-  m_Name: Button 2
-  m_TagString: Untagged
+  m_Name: Button 1
+  m_TagString: ButtonTag
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1440,7 +1440,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1337018886}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.27480793, y: 24.7898083, z: 36.0769615}
+  m_LocalPosition: {x: -22.7414665, y: 24.7898083, z: 36.0769615}
   m_LocalScale: {x: 1, y: .5, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1531,7 +1531,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1354516936}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.6343503, y: 21.3630219, z: 31.8883095}
+  m_LocalPosition: {x: -22.6310635, y: 21.3630219, z: 31.8883095}
   m_LocalScale: {x: 20, y: 2, z: 10}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1733,7 +1733,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1544938748}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.47365046, y: 25.3754005, z: 33.7441292}
+  m_LocalPosition: {x: -22.9403076, y: 25.3754005, z: 33.7441292}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1952,7 +1952,7 @@ Transform:
   m_PrefabInternal: {fileID: 29317975}
   m_GameObject: {fileID: 1904597023}
   m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: -26.401144, y: 23.8269463, z: 12.6886721}
+  m_LocalPosition: {x: 14.575779, y: 24.0013332, z: -2.59887981}
   m_LocalScale: {x: .5, y: .100000001, z: .5}
   m_Children: []
   m_Father: {fileID: 0}
