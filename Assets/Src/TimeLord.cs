@@ -16,7 +16,6 @@ public class TimeLord : MonoBehaviour {
 	public float rewindAmount;
 	private float timeElapsed;
 
-	float time = 1f;
 	bool rewinding;
 
 	public void addRewindTime(float f){
@@ -63,6 +62,11 @@ public class TimeLord : MonoBehaviour {
 				} else {
 						paused = false;
 				}
+
+		if (rewindAmount<=0)
+		{
+			rewinding=false;
+		}
 
 		if (Input.GetKey (KeyCode.R))
 		{
