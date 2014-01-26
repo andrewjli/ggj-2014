@@ -33,7 +33,7 @@ public class ButtonPress : MonoBehaviour {
 		
 		// Action logic
 		GameObject.Find("Door").GetComponent<UnlockDoor>().up();
-		yield return new WaitForSeconds(1);
+		yield return new WaitForSeconds(10);
 		
 		// Button up
 		gameObject.transform.position += Vector3.up * 0.1f;
