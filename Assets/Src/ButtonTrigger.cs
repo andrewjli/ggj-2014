@@ -9,12 +9,11 @@ public class ButtonTrigger : MonoBehaviour {
 	
 	// Update is called once per frame
 	void OnTriggerEnter(Collider other) {
-        if (other.gameObject.tag == "MainCamera")
-        {
-            buttonPressed = true;
-            print("test");
-        }
-    }
+		if (other.gameObject.tag == "MainCamera")
+		{
+			buttonPressed = true;
+		}
+	}
 
     public bool isPressed()
     {

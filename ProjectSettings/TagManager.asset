@@ -7,6 +7,10 @@ TagManager:
   - TimeTrack
   - door1
   - TimeController
+  - door3
+  - door4
+  - door5
+  - door6
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX

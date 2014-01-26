@@ -28,14 +28,20 @@ public class ButtonPress : MonoBehaviour {
 		pressed = true;
 		// Button down
 		gameObject.transform.position += Vector3.down * 0.1f;
-		yield return new WaitForSeconds(1);
 
 		// Play sound
 		
 		// Action logic
+		GameObject.Find("Door").GetComponent<UnlockDoor>().up();
+		yield return new WaitForSeconds(1);
 		
 		// Button up
 		gameObject.transform.position += Vector3.up * 0.1f;
+		GameObject.Find("Door").GetComponent<UnlockDoor>().down();
 		pressed = false;
+	}
+
+	public bool isPressed() {
+		return pressed;
 	}
 }

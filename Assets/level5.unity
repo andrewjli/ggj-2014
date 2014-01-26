@@ -138,7 +138,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51433966}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.18202496, y: 1.39653778, z: -2.57507706}
+  m_LocalPosition: {x: -6.18202496, y: .793417931, z: -2.57507706}
   m_LocalScale: {x: 8, y: 1, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -298,7 +298,7 @@ GameObject:
   - 136: {fileID: 296548652}
   - 23: {fileID: 296548651}
   m_Layer: 0
-  m_Name: Switch
+  m_Name: Switch 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -370,7 +370,7 @@ GameObject:
   - 23: {fileID: 345636685}
   - 114: {fileID: 345636688}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Button 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -503,6 +503,68 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+--- !u!1 &549018280
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 549018282}
+  - 108: {fileID: 549018281}
+  m_Layer: 0
+  m_Name: TimeLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &549018281
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 549018280}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Type: 2
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Intensity: 1
+  m_Range: 48.4099998
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &549018282
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 549018280}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.13004684, y: 20.2505283, z: 10.3241158}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &584225383
 GameObject:
   m_ObjectHideFlags: 0
@@ -517,7 +579,7 @@ GameObject:
   - 114: {fileID: 584225384}
   m_Layer: 0
   m_Name: Cub1
-  m_TagString: Untagged
+  m_TagString: TimeTrack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -537,7 +599,7 @@ MonoBehaviour:
   startPoint: {fileID: 995762793}
   speed: .200000003
   changeDirection: 0
-  unaffectedByTimechange: 1
+  unaffectedByTimechange: 0
 --- !u!23 &584225385
 Renderer:
   m_ObjectHideFlags: 0
@@ -585,7 +647,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 584225383}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -6.18202496, y: 21.3630199, z: 5.95291328}
+  m_LocalPosition: {x: -17.9864006, y: 21.3630199, z: 5.95291328}
   m_LocalScale: {x: 8, y: 1, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -605,7 +667,6 @@ GameObject:
   - 114: {fileID: 591569183}
   - 114: {fileID: 591569182}
   - 114: {fileID: 591569181}
-  - 114: {fileID: 591569185}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -765,26 +826,13 @@ CharacterController:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 591569175}
   serializedVersion: 2
-  m_Height: 2
+  m_Height: 4
   m_Radius: .5
   m_SlopeLimit: 45
   m_StepOffset: .300000012
   m_SkinWidth: .0799999982
   m_MinMoveDistance: 0
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &591569185
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 591569175}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fce7c55aff6aef4090a55b687b7612b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeRemaining: 60
-  currentPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &630045201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1100,7 +1148,7 @@ GameObject:
   - 114: {fileID: 1007094796}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: TimeTrack
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1184,7 +1232,7 @@ GameObject:
   - 136: {fileID: 1037306741}
   - 23: {fileID: 1037306740}
   m_Layer: 0
-  m_Name: Switch
+  m_Name: Switch 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1256,7 +1304,7 @@ GameObject:
   - 23: {fileID: 1314947684}
   - 114: {fileID: 1314947688}
   m_Layer: 0
-  m_Name: Button
+  m_Name: Button 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1337,9 +1385,10 @@ GameObject:
   - 23: {fileID: 1337018888}
   - 65: {fileID: 1337018887}
   - 114: {fileID: 1337018891}
+  - 114: {fileID: 1337018892}
   m_Layer: 0
   m_Name: Door
-  m_TagString: door1
+  m_TagString: door5
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1401,9 +1450,20 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1337018886}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb7739ee70b57c54cb3bb2a474839273, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1337018892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1337018886}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91cfbe0a9bc3e164f95f7b7f07be9007, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1354516936
@@ -1473,6 +1533,45 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -5.6343503, y: 21.3630219, z: 31.8883095}
   m_LocalScale: {x: 20, y: 2, z: 10}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!1 &1369392804
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1369392806}
+  - 114: {fileID: 1369392805}
+  m_Layer: 0
+  m_Name: Time Lord
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1369392805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1369392804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e2f137c29e04f33ac14725bcf3c602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewindAmount: 60
+--- !u!4 &1369392806
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1369392804}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.42302585, y: 20.5308228, z: 16.6702862}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &1470223844
@@ -1586,7 +1685,7 @@ GameObject:
   - 4: {fileID: 1544938750}
   - 108: {fileID: 1544938749}
   m_Layer: 0
-  m_Name: Point light
+  m_Name: Door Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1601,7 +1700,7 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 2
-  m_Color: {r: 0, g: 1, b: .255172253, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
