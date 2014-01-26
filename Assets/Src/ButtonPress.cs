@@ -24,7 +24,7 @@ public class ButtonPress : MonoBehaviour {
 		if (pressed && timeRemaining<=0)
 				{
 				pressed=false;
-				gameObject.transform.position += Vector3.up * 0.3f;
+				gameObject.transform.position += Vector3.up * 0.2f;
 				GameObject.Find("Door").GetComponent<UnlockDoor>().down();
 					}
 		}
@@ -55,7 +55,7 @@ public class ButtonPress : MonoBehaviour {
 	void runPressed(){
 		pressed = true;
 		timeRemaining = 2.0f;
-		gameObject.transform.position += Vector3.down * 0.3f;
+		gameObject.transform.position += Vector3.down * 0.2f;
 		GameObject.Find("Door").GetComponent<UnlockDoor>().up();
 		}
 }
