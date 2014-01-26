@@ -19,12 +19,12 @@ public class ButtonPress : MonoBehaviour {
 		} else if (pressed) {
 			if (!timecont.isStopped())
 				timeRemaining -= Time.deltaTime;
+			else if (timecont.isRewinding())
+				timeRemaining += Time.deltaTime;
 		}
 				
 		if (pressed && timeRemaining<=0) {
-			pressed=false;
-			gameObject.transform.position += Vector3.up * 0.2f;
-			GameObject.Find("Door").GetComponent<UnlockDoor>().down();
+			runUnpressed();
 		}
 	}
 
@@ -46,8 +46,8 @@ public class ButtonPress : MonoBehaviour {
 			if (!pressed)
 				runPressed ();
 		} else {
-			pressed=a;
-			timeRemaining=0;
+			if (pressed)
+			runUnpressed();
 		}
 	}
 
@@ -56,9 +56,16 @@ public class ButtonPress : MonoBehaviour {
 		if(gameObject.name == "Button 3") {
 			timeRemaining = 10.0f;
 		} else {
-			timeRemaining = 2.0f;
+			timeRemaining = 5.0f;
 		}
 		gameObject.transform.position += Vector3.down * 0.2f;
 		GameObject.Find("Door").GetComponent<UnlockDoor>().up();
 		}
+
+	void runUnpressed(){
+		timeRemaining = 0;
+		pressed=false;
+		gameObject.transform.position += Vector3.up * 0.2f;
+		GameObject.Find("Door").GetComponent<UnlockDoor>().down();
+	}
 }
