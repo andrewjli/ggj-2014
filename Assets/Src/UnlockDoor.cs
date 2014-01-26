@@ -4,7 +4,7 @@ using System.Collections;
 public class UnlockDoor : MonoBehaviour {
 	private int unlock = 0;
 	private Color green = new Color(0.0f, 1.0f, (65f/255f));
-	private Color red = new Color(1.0f, 0.0f, 0.0f);
+	//private Color orange = new Color(1.0f, (185.0f/255.0f), 0.0f);
 	private Light _light;
 	private Behaviour _nextLevel;
 
