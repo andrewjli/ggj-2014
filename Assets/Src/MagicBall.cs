@@ -32,7 +32,7 @@ public class MagicBall : MonoBehaviour {
 			if (hasBeenPaused)
 			{
 				hasBeenPaused=false;
-				//gameObject.GetComponent<Rigidbody> ().freezeRotation = false;
+				gameObject.GetComponent<Rigidbody> ().freezeRotation = false;
 
 				gameObject.GetComponent<Rigidbody> ().useGravity = true;
 				gameObject.GetComponent<Rigidbody> ().WakeUp();
