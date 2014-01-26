@@ -1569,7 +1569,7 @@ GameObject:
   - 65: {fileID: 1670565312}
   - 114: {fileID: 1670565311}
   m_Layer: 0
-  m_Name: PressurePlate
+  m_Name: BlockadeDropButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1581,8 +1581,8 @@ Transform:
   m_PrefabParentObject: {fileID: 400002, guid: 455aa2542a5761a41b7ef4879adae72b, type: 3}
   m_PrefabInternal: {fileID: 647079933}
   m_GameObject: {fileID: 1670565309}
-  m_LocalRotation: {x: -.707106888, y: 0, z: -0, w: .707106769}
-  m_LocalPosition: {x: 1.83242512, y: 70.6637573, z: 23.4816399}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.55879867, y: 70.5184708, z: 23.665451}
   m_LocalScale: {x: .300000012, y: .300000012, z: .300000012}
   m_Children:
   - {fileID: 2137088273}
@@ -1619,7 +1619,7 @@ Animator:
   m_PrefabInternal: {fileID: 647079933}
   m_GameObject: {fileID: 1670565309}
   m_Enabled: 1
-  m_Avatar: {fileID: 9000000, guid: 455aa2542a5761a41b7ef4879adae72b, type: 3}
+  m_Avatar: {fileID: 9000000, guid: b487cbbe61e54bc4798de74b41355c02, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_ApplyRootMotion: 1
@@ -1654,7 +1654,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 647079933}
   m_GameObject: {fileID: 1670565309}
-  m_Mesh: {fileID: 4300000, guid: 455aa2542a5761a41b7ef4879adae72b, type: 3}
+  m_Mesh: {fileID: 4300000, guid: b487cbbe61e54bc4798de74b41355c02, type: 3}
 --- !u!1 &1762094936
 GameObject:
   m_ObjectHideFlags: 0
@@ -1883,7 +1883,6 @@ GameObject:
   - 114: {fileID: 1958041260}
   - 114: {fileID: 1958041259}
   - 114: {fileID: 1958041258}
-  - 114: {fileID: 1958041257}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -1891,17 +1890,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1958041257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1958041256}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fce7c55aff6aef4090a55b687b7612b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1958041258
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2363,7 +2351,7 @@ MeshFilter:
     type: 3}
   m_PrefabInternal: {fileID: 647079933}
   m_GameObject: {fileID: 2137088270}
-  m_Mesh: {fileID: 4300002, guid: 455aa2542a5761a41b7ef4879adae72b, type: 3}
+  m_Mesh: {fileID: 4300000, guid: b487cbbe61e54bc4798de74b41355c02, type: 3}
 --- !u!4 &2137088273
 Transform:
   m_ObjectHideFlags: 0
