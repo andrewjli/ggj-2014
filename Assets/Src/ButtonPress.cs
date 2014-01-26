@@ -53,7 +53,11 @@ public class ButtonPress : MonoBehaviour {
 
 	void runPressed(){
 		pressed = true;
-		timeRemaining = 2.0f;
+		if(gameObject.name == "Button 3") {
+			timeRemaining = 10.0f;
+		} else {
+			timeRemaining = 2.0f;
+		}
 		gameObject.transform.position += Vector3.down * 0.2f;
 		GameObject.Find("Door").GetComponent<UnlockDoor>().up();
 		}
