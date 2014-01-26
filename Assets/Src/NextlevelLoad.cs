@@ -27,7 +27,7 @@ public class NextlevelLoad : MonoBehaviour {
 			if (this.gameObject.tag=="door5"){
 				Application.LoadLevel("level6");}
 			if (this.gameObject.tag=="door6"){
-				Application.LoadLevel("levelCredits");}
+				Application.LoadLevel("levelcredits");}
 		}
 	}
 }
