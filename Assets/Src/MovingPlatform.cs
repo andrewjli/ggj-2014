@@ -10,15 +10,20 @@ public class MovingPlatform : MonoBehaviour {
 	private bool direction = true;
 	public bool unaffectedByTimechange;
 	// Use this for initialization
-	void Start () {}
+
+	private TimeLord timeController;
+
+	void Start () {
+		timeController = GameObject.FindObjectOfType<TimeLord> ();
+	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void Update () {
 		if (unaffectedByTimechange) {
 			calculatePos();
 				}
 		else{
-		if (Time.timeScale!=0)
+			if (!timeController.isStopped())
 				calculatePos();
 		}
 	}
@@ -32,13 +37,16 @@ public class MovingPlatform : MonoBehaviour {
 				direction = false;
 			}
 			if (direction){
+				if (!timeController.isRewinding())
 				transform.position = Vector3.MoveTowards (transform.position, startPoint.position, speed);
 			}
 			else if (!direction){
-				transform.position = Vector3.MoveTowards (transform.position, endPoint.position, speed);
+				if (!timeController.isRewinding())
+					transform.position = Vector3.MoveTowards (transform.position, endPoint.position, speed);
 			}
 		} else {
-			transform.position = Vector3.MoveTowards (transform.position, endPoint.position, speed);
+			if (!timeController.isRewinding())
+				transform.position = Vector3.MoveTowards (transform.position, endPoint.position, speed);
 		}
 	}
 }

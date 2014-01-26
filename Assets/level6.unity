@@ -1095,8 +1095,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3fce7c55aff6aef4090a55b687b7612b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeRemaining: 60
-  currentPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &630045201
 GameObject:
   m_ObjectHideFlags: 0
@@ -1200,7 +1198,7 @@ MonoBehaviour:
   startPoint: {fileID: 1269289971}
   speed: .100000001
   changeDirection: 0
-  unaffectedByTimechange: 1
+  unaffectedByTimechange: 0
 --- !u!23 &703982180
 Renderer:
   m_ObjectHideFlags: 0
@@ -1543,6 +1541,45 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.18202496, y: 22, z: -80}
   m_LocalScale: {x: 8, y: 1, z: 8}
+  m_Children: []
+  m_Father: {fileID: 0}
+--- !u!1 &773081997
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 773081999}
+  - 114: {fileID: 773081998}
+  m_Layer: 0
+  m_Name: TimeController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &773081998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773081997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72e2f137c29e04f33ac14725bcf3c602, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewindAmount: 0
+--- !u!4 &773081999
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 773081997}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.38287115, y: 24.4285412, z: -76.4467087}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &805181355
@@ -1890,6 +1927,68 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1001512780}
   m_Mesh: {fileID: 4300000, guid: 39a8e1aabce77964e9e9aced283e301f, type: 2}
+--- !u!1 &1165330321
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1165330323}
+  - 108: {fileID: 1165330322}
+  m_Layer: 0
+  m_Name: TimeLight
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!108 &1165330322
+Light:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1165330321}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Type: 1
+  m_Color: {r: .970588207, g: 0, b: 0, a: 1}
+  m_Intensity: .5
+  m_Range: 10
+  m_SpotAngle: 30
+  m_CookieSize: 10
+  m_Shadows:
+    m_Type: 0
+    m_Resolution: -1
+    m_Strength: 1
+    m_Bias: .0500000007
+    m_Softness: 4
+    m_SoftnessFade: 1
+  m_Cookie: {fileID: 0}
+  m_DrawHalo: 0
+  m_ActuallyLightmapped: 0
+  m_Flare: {fileID: 0}
+  m_RenderMode: 0
+  m_CullingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_Lightmapping: 1
+  m_ShadowSamples: 1
+  m_ShadowRadius: 0
+  m_ShadowAngle: 0
+  m_IndirectIntensity: 1
+  m_AreaSize: {x: 1, y: 1}
+--- !u!4 &1165330323
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1165330321}
+  m_LocalRotation: {x: .421051204, y: -.183927894, z: .0635368004, w: .885917366}
+  m_LocalPosition: {x: -17.6197739, y: 27.101965, z: -46.2022438}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
 --- !u!1 &1269289967
 GameObject:
   m_ObjectHideFlags: 0
@@ -2587,7 +2686,7 @@ MonoBehaviour:
   startPoint: {fileID: 733478884}
   speed: .100000001
   changeDirection: 0
-  unaffectedByTimechange: 1
+  unaffectedByTimechange: 0
 --- !u!23 &1907347834
 Renderer:
   m_ObjectHideFlags: 0

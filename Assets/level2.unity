@@ -109,6 +109,10 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: .707106829
       objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: b92b91c4acf0b9043b7e4309930fee2e, type: 2}
+      propertyPath: timeBonus
+      value: 12
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b92b91c4acf0b9043b7e4309930fee2e, type: 2}
   m_RootGameObject: {fileID: 1904597023}
@@ -1276,7 +1280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationalSpeed: .800000012
-  timeBonus: 5
+  timeBonus: 12
 --- !u!23 &1904597025
 Renderer:
   m_ObjectHideFlags: 0

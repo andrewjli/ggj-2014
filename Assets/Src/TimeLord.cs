@@ -14,10 +14,19 @@ public class TimeLord : MonoBehaviour {
 	private float timeElapsed;
 
 	float time = 1f;
+	bool rewinding;
 
 	public void addRewindTime(float f){
 				rewindAmount += f;
 		}
+
+	public bool isRewinding(){
+		return rewinding;
+	}
+
+	public bool isStopped(){
+		return paused;
+	}
 
 	void Start () {
 		timeLight = GameObject.Find("TimeLight").GetComponent<Light>();
@@ -49,15 +58,15 @@ public class TimeLord : MonoBehaviour {
 						paused = false;
 				}
 
-		bool isRewinding = false;
 		if (Input.GetKey (KeyCode.R))
 		{
 			if (rewindAmount>0)
 			{
-			isRewinding=true;
+				rewinding=true;
 			rewind ();
 			}
 		} else {
+			rewinding = false;
 			// Not rewinding
 			foreach (GameObject o in GameObject.FindObjectsOfType (typeof(GameObject)))
 			{
@@ -80,7 +89,7 @@ public class TimeLord : MonoBehaviour {
             }
         }
 
-		if (isRewinding) {
+		if (rewinding) {
 				rewindAmount =Mathf.Max (0, rewindAmount - Time.deltaTime);
 				timeElapsed = Mathf.Max (0, timeElapsed - Time.deltaTime);
 	timeLight.color= new Color(0,255,192);
