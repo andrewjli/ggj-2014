@@ -109,7 +109,7 @@ public class TimeLord : MonoBehaviour {
 				}
 
 		// Lerp time for progressive pause effect, oh and apply it.
-		Time.timeScale = (paused) ? 0f: 1f;
+		//Time.timeScale = (paused) ? 0f: 1f;
 	}
 
 	void OnGUI()
