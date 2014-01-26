@@ -111,7 +111,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11400000, guid: b92b91c4acf0b9043b7e4309930fee2e, type: 2}
       propertyPath: timeBonus
-      value: 30
+      value: 55
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b92b91c4acf0b9043b7e4309930fee2e, type: 2}
@@ -509,7 +509,7 @@ Transform:
   m_GameObject: {fileID: 461736626}
   m_LocalRotation: {x: 0, y: -.707106829, z: 0, w: .707106829}
   m_LocalPosition: {x: 26.8110199, y: 21.3630219, z: 8.09231091}
-  m_LocalScale: {x: 34.1148949, y: 2, z: -114.23204}
+  m_LocalScale: {x: 34.1148949, y: 2, z: -130.211548}
   m_Children: []
   m_Father: {fileID: 0}
 --- !u!1 &479654137
@@ -726,7 +726,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 591569175}
   m_LocalRotation: {x: 0, y: .638892531, z: 0, w: .76929611}
-  m_LocalPosition: {x: -43.5445786, y: 2.9906311, z: -39.6977654}
+  m_LocalPosition: {x: -43.5445786, y: 2.37638664, z: -39.6977654}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -973,7 +973,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 652314014}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.4205818, y: 21.4745483, z: -56.4646606}
+  m_LocalPosition: {x: -50, y: 21.4745483, z: -56.4646606}
   m_LocalScale: {x: 8, y: 1, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1397,7 +1397,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1000273764}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.4205818, y: 21.4745483, z: 45.6994858}
+  m_LocalPosition: {x: -50, y: 21.4745483, z: 45.6994858}
   m_LocalScale: {x: 8, y: 1, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1656,7 +1656,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1367750662}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -43.4205818, y: 21.4745483, z: -56.4646606}
+  m_LocalPosition: {x: -50, y: 21.4745483, z: -56.4646606}
   m_LocalScale: {x: 8, y: 1, z: 8}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1876,10 +1876,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b9ff580ad61c46a4fb155bf9216d2edb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  endPoint: {fileID: 995762793}
-  startPoint: {fileID: 1725690050}
+  endPoint: {fileID: 1725690050}
+  startPoint: {fileID: 995762793}
   speed: .150000006
-  changeDirection: 1
+  changeDirection: 0
   unaffectedByTimechange: 0
 --- !u!23 &1500979552
 Renderer:
@@ -2233,7 +2233,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationalSpeed: .800000012
-  timeBonus: 30
+  timeBonus: 55
 --- !u!23 &1904597025
 Renderer:
   m_ObjectHideFlags: 0
