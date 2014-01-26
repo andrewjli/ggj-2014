@@ -36,12 +36,12 @@ public class TimeLord : MonoBehaviour {
 
 	void Update()
 	{
-		if (Input.GetKey (KeyCode.Q)) {
+		if (Input.GetKeyDown (KeyCode.Q)) {
 			Application.LoadLevel(Application.loadedLevel);
 		}
 		bool isMoving = character.velocity.magnitude > 0 || Input.GetKey (KeyCode.W) || Input.GetKey (KeyCode.A) 
 			|| Input.GetKey (KeyCode.S) || Input.GetKey (KeyCode.D) || Input.GetKey (KeyCode.Space)
-				|| Input.GetKey (KeyCode.R);
+				|| (Input.GetKey (KeyCode.R) &&rewindAmount>0);
 
 		if (!isMoving) {
 						paused = true;
