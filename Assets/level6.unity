@@ -1570,7 +1570,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72e2f137c29e04f33ac14725bcf3c602, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewindAmount: 0
+  rewindAmount: 30
 --- !u!4 &773081999
 Transform:
   m_ObjectHideFlags: 0
