@@ -3,7 +3,6 @@ using System.Collections;
 using System.Collections.Generic;
 
 public class TimeLord : MonoBehaviour {
-
 	Dictionary<string, ArrayList> gameObjectButtonStates = new Dictionary<string, ArrayList>();
 
 
@@ -31,6 +30,8 @@ public class TimeLord : MonoBehaviour {
 	}
 
 	void Start () {
+		Screen.showCursor = false;
+		Screen.lockCursor = true;
 		timeLight = GameObject.Find("TimeLight").GetComponent<Light>();
 		timeElapsed = 0;
 		foreach (GameObject o in GameObject.FindObjectsOfType(typeof(GameObject)))
@@ -47,6 +48,13 @@ public class TimeLord : MonoBehaviour {
 			}
         }
     }
+
+	void Update() {
+		if (Input.GetKey(KeyCode.Escape))
+		{
+			Application.Quit();
+		}
+	}
 
 	void FixedUpdate()
 	{
