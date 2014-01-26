@@ -801,8 +801,8 @@ MonoBehaviour:
         tangentMode: 0
       m_PreInfinity: 2
       m_PostInfinity: 2
-    maxGroundAcceleration: 30
-    maxAirAcceleration: 20
+    maxGroundAcceleration: 15
+    maxAirAcceleration: 10
     gravity: 10
     maxFallSpeed: 20
   jumping:
@@ -815,7 +815,7 @@ MonoBehaviour:
     enabled: 1
     movementTransfer: 2
   sliding:
-    enabled: 1
+    enabled: 0
     slidingSpeed: 15
     sidewaysControl: 1
     speedControl: .400000006
