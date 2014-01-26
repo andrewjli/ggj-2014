@@ -5,6 +5,9 @@ Temp/
 Obj/
 UnityGenerated/
 Library/
+*_Data/
+*.exe
+
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
