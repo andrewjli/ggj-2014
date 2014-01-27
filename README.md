@@ -1,4 +1,4 @@
-ggj-2014
-========
+About Time
+==========
 
-A Game for the Global Game Jam 2014
+A Unity Game for the Global Game Jam 2014
